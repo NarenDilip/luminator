@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:luminator/src/ui/splashScreen.dart';
+import 'package:luminator/src/ui/splash_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -26,7 +26,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       home: Scaffold(
-        body: splashScreen(),
+        body: splash_screen(),
       )
     );
   }
