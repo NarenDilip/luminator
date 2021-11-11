@@ -20,38 +20,579 @@ class DeviceCountForm extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
-    return SingleChildScrollView(
-      child: Container(
-          height: size.height,
-          width: double.infinity,
-          decoration: const BoxDecoration(
-            image: DecorationImage(
-              image: AssetImage("assets/icons/background_img.jpeg"),
-              fit: BoxFit.cover,
-            ),
-          ),
-          child: Form(
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: const <Widget>[
-                  Image(
-                      image: AssetImage("assets/icons/logo.png"),
-                      height: 75,
-                      width: 75),
-                  SizedBox(height: 20),
-                  SizedBox(
-                    width: double.infinity,
-                    child: Text(
-                      "Dashboard",
-                      textAlign: TextAlign.center,
-                      style: TextStyle(
-                          fontSize: 30.0,
-                          fontFamily: "Montserrat",
-                          fontWeight: FontWeight.bold,
-                          color: Colors.black),
-                    ),
+    return Center(
+        child: Container(
+            padding: new EdgeInsets.all(10.0),
+            child: Column(mainAxisSize: MainAxisSize.min, children: <Widget>[
+              Card(
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(15.0),
                   ),
-                ],
-              ))));
+                  elevation: 10,
+                  child:
+                      Column(mainAxisSize: MainAxisSize.min, children: <Widget>[
+                    const SizedBox(height: 10),
+                    Row(
+                      children: const <Widget>[
+                        Expanded(
+                          child: Padding(
+                            padding: EdgeInsets.fromLTRB(15.0, 0.0, 0.0, 0),
+                            child: Align(
+                              alignment: Alignment.centerLeft,
+                            ),
+                          ),
+                        ),
+                        Expanded(
+                          child: Padding(
+                            padding: EdgeInsets.fromLTRB(0, 0.0, 0.0, 0),
+                            child: Align(
+                              child: Text(
+                                "ILM",
+                                textAlign: TextAlign.center,
+                                style: TextStyle(
+                                    fontSize: 20.0,
+                                    fontFamily: "Montserrat",
+                                    fontWeight: FontWeight.bold,
+                                    color: Colors.black),
+                              ),
+                              alignment: Alignment.center,
+                            ),
+                          ),
+                        ),
+                        Expanded(
+                          child: Padding(
+                            padding: EdgeInsets.fromLTRB(0, 0, 15.0, 0),
+                            child: Align(
+                              child: Text(
+                                "100",
+                                style: TextStyle(
+                                    fontSize: 18.0,
+                                    fontFamily: "Montserrat",
+                                    fontWeight: FontWeight.bold,
+                                    color: Colors.black),
+                              ),
+                              alignment: Alignment.centerRight,
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                        const SizedBox(height: 10),
+                        Row(
+                          children: const <Widget>[
+                            Expanded(
+                              child: Padding(
+                                padding: EdgeInsets.fromLTRB(15.0, 0.0, 0.0, 0),
+                                child: Align(
+                                  child: Text(
+                                    "ON",
+                                    textAlign: TextAlign.center,
+                                    style: TextStyle(
+                                        fontSize: 18.0,
+                                        fontFamily: "Montserrat",
+                                        fontWeight: FontWeight.bold,
+                                        color: Colors.black),
+                                  ),
+                                  alignment: Alignment.centerLeft,
+                                ),
+                              ),
+                            ),
+                            Expanded(
+                              child: Padding(
+                                padding: EdgeInsets.fromLTRB(0, 0.0, 0.0, 0),
+                                child: Align(
+                                  child: Text(
+                                    "OFF",
+                                    textAlign: TextAlign.center,
+                                    style: TextStyle(
+                                        fontSize: 18.0,
+                                        fontFamily: "Montserrat",
+                                        fontWeight: FontWeight.bold,
+                                        color: Colors.black),
+                                  ),
+                                  alignment: Alignment.center,
+                                ),
+                              ),
+                            ),
+                            Expanded(
+                              child: Padding(
+                                padding: EdgeInsets.fromLTRB(0, 0, 15.0, 0),
+                                child: Align(
+                                  child: Text(
+                                    "NC",
+                                    style: TextStyle(
+                                        fontSize: 18.0,
+                                        fontFamily: "Montserrat",
+                                        fontWeight: FontWeight.bold,
+                                        color: Colors.black),
+                                  ),
+                                  alignment: Alignment.centerRight,
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
+                        const SizedBox(height: 10),
+                        Row(
+                          children: const <Widget>[
+                            Expanded(
+                              child: Padding(
+                                padding: EdgeInsets.fromLTRB(20.0, 0.0, 0.0, 0),
+                                child: Align(
+                                  child: Text(
+                                    "30",
+                                    textAlign: TextAlign.center,
+                                    style: TextStyle(
+                                        fontSize: 18.0,
+                                        fontFamily: "Montserrat",
+                                        fontWeight: FontWeight.bold,
+                                        color: Colors.black),
+                                  ),
+                                  alignment: Alignment.centerLeft,
+                                ),
+                              ),
+                            ),
+                            Expanded(
+                              child: Padding(
+                                padding: EdgeInsets.fromLTRB(0, 0.0, 0.0, 0),
+                                child: Align(
+                                  child: Text(
+                                    "40",
+                                    textAlign: TextAlign.center,
+                                    style: TextStyle(
+                                        fontSize: 18.0,
+                                        fontFamily: "Montserrat",
+                                        fontWeight: FontWeight.bold,
+                                        color: Colors.black),
+                                  ),
+                                  alignment: Alignment.center,
+                                ),
+                              ),
+                            ),
+                            Expanded(
+                              child: Padding(
+                                padding: EdgeInsets.fromLTRB(0, 0, 20.0, 0),
+                                child: Align(
+                                  child: Text(
+                                    "40",
+                                    style: TextStyle(
+                                        fontSize: 18.0,
+                                        fontFamily: "Montserrat",
+                                        fontWeight: FontWeight.bold,
+                                        color: Colors.black),
+                                  ),
+                                  alignment: Alignment.centerRight,
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
+                        const SizedBox(height: 10),
+                        Row(
+                          children: const <Widget>[
+                            Expanded(
+                              child: Padding(
+                                padding: EdgeInsets.fromLTRB(20.0, 0.0, 0.0, 0),
+                                child: Align(
+                                  child: Icon(Icons.add),
+                                  alignment: Alignment.centerLeft,
+                                ),
+                              ),
+                            ),
+
+                            Expanded(
+                              child: Padding(
+                                padding: EdgeInsets.fromLTRB(0, 0, 20.0, 0),
+                                child: Align(
+                                  child: Icon(Icons.settings),
+                                  alignment: Alignment.centerRight,
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
+                        const SizedBox(height: 20),
+                  ])),
+              const SizedBox(height: 20),
+              Card(
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(15.0),
+                  ),
+                  elevation: 10,
+                  child:
+                  Column(mainAxisSize: MainAxisSize.min, children: <Widget>[
+                    const SizedBox(height: 20),
+                    Row(
+                      children: const <Widget>[
+                        Expanded(
+                          child: Padding(
+                            padding: EdgeInsets.fromLTRB(15.0, 0.0, 0.0, 0),
+                            child: Align(
+                              alignment: Alignment.centerLeft,
+                            ),
+                          ),
+                        ),
+                        Expanded(
+                          child: Padding(
+                            padding: EdgeInsets.fromLTRB(0, 0.0, 0.0, 0),
+                            child: Align(
+                              child: Text(
+                                "CCMS",
+                                textAlign: TextAlign.center,
+                                style: TextStyle(
+                                    fontSize: 20.0,
+                                    fontFamily: "Montserrat",
+                                    fontWeight: FontWeight.bold,
+                                    color: Colors.black),
+                              ),
+                              alignment: Alignment.center,
+                            ),
+                          ),
+                        ),
+                        Expanded(
+                          child: Padding(
+                            padding: EdgeInsets.fromLTRB(0, 0, 15.0, 0),
+                            child: Align(
+                              child: Text(
+                                "50",
+                                style: TextStyle(
+                                    fontSize: 18.0,
+                                    fontFamily: "Montserrat",
+                                    fontWeight: FontWeight.bold,
+                                    color: Colors.black),
+                              ),
+                              alignment: Alignment.centerRight,
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                    const SizedBox(height: 20),
+                    Row(
+                      children: const <Widget>[
+                        Expanded(
+                          child: Padding(
+                            padding: EdgeInsets.fromLTRB(15.0, 0.0, 0.0, 0),
+                            child: Align(
+                              child: Text(
+                                "ON",
+                                textAlign: TextAlign.center,
+                                style: TextStyle(
+                                    fontSize: 18.0,
+                                    fontFamily: "Montserrat",
+                                    fontWeight: FontWeight.bold,
+                                    color: Colors.black),
+                              ),
+                              alignment: Alignment.centerLeft,
+                            ),
+                          ),
+                        ),
+                        Expanded(
+                          child: Padding(
+                            padding: EdgeInsets.fromLTRB(0, 0.0, 0.0, 0),
+                            child: Align(
+                              child: Text(
+                                "OFF",
+                                textAlign: TextAlign.center,
+                                style: TextStyle(
+                                    fontSize: 18.0,
+                                    fontFamily: "Montserrat",
+                                    fontWeight: FontWeight.bold,
+                                    color: Colors.black),
+                              ),
+                              alignment: Alignment.center,
+                            ),
+                          ),
+                        ),
+                        Expanded(
+                          child: Padding(
+                            padding: EdgeInsets.fromLTRB(0, 0, 15.0, 0),
+                            child: Align(
+                              child: Text(
+                                "NC",
+                                style: TextStyle(
+                                    fontSize: 18.0,
+                                    fontFamily: "Montserrat",
+                                    fontWeight: FontWeight.bold,
+                                    color: Colors.black),
+                              ),
+                              alignment: Alignment.centerRight,
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                    const SizedBox(height: 10),
+                    Row(
+                      children: const <Widget>[
+                        Expanded(
+                          child: Padding(
+                            padding: EdgeInsets.fromLTRB(20.0, 0.0, 0.0, 0),
+                            child: Align(
+                              child: Text(
+                                "30",
+                                textAlign: TextAlign.center,
+                                style: TextStyle(
+                                    fontSize: 18.0,
+                                    fontFamily: "Montserrat",
+                                    fontWeight: FontWeight.bold,
+                                    color: Colors.black),
+                              ),
+                              alignment: Alignment.centerLeft,
+                            ),
+                          ),
+                        ),
+                        Expanded(
+                          child: Padding(
+                            padding: EdgeInsets.fromLTRB(0, 0.0, 0.0, 0),
+                            child: Align(
+                              child: Text(
+                                "40",
+                                textAlign: TextAlign.center,
+                                style: TextStyle(
+                                    fontSize: 18.0,
+                                    fontFamily: "Montserrat",
+                                    fontWeight: FontWeight.bold,
+                                    color: Colors.black),
+                              ),
+                              alignment: Alignment.center,
+                            ),
+                          ),
+                        ),
+                        Expanded(
+                          child: Padding(
+                            padding: EdgeInsets.fromLTRB(0, 0, 20.0, 0),
+                            child: Align(
+                              child: Text(
+                                "40",
+                                style: TextStyle(
+                                    fontSize: 18.0,
+                                    fontFamily: "Montserrat",
+                                    fontWeight: FontWeight.bold,
+                                    color: Colors.black),
+                              ),
+                              alignment: Alignment.centerRight,
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                    const SizedBox(height: 20),
+                    Row(
+                      children: const <Widget>[
+                        Expanded(
+                          child: Padding(
+                            padding: EdgeInsets.fromLTRB(20.0, 0.0, 0.0, 0),
+                            child: Align(
+                              child: Icon(Icons.add),
+                              alignment: Alignment.centerLeft,
+                            ),
+                          ),
+                        ),
+
+                        Expanded(
+                          child: Padding(
+                            padding: EdgeInsets.fromLTRB(0, 0, 20.0, 0),
+                            child: Align(
+                              child: Icon(Icons.settings),
+                              alignment: Alignment.centerRight,
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                    const SizedBox(height: 20),
+                  ])),
+              const SizedBox(height: 20),
+              Card(
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(15.0),
+                  ),
+                  elevation: 10,
+                  child:
+                  Column(mainAxisSize: MainAxisSize.min, children: <Widget>[
+                    const SizedBox(height: 20),
+                    Row(
+                      children: const <Widget>[
+                        Expanded(
+                          child: Padding(
+                            padding: EdgeInsets.fromLTRB(15.0, 0.0, 0.0, 0),
+                            child: Align(
+                              alignment: Alignment.centerLeft,
+                            ),
+                          ),
+                        ),
+                        Expanded(
+                          child: Padding(
+                            padding: EdgeInsets.fromLTRB(0, 0.0, 0.0, 0),
+                            child: Align(
+                              child: Text(
+                                "GATEWAY",
+                                textAlign: TextAlign.center,
+                                style: TextStyle(
+                                    fontSize: 20.0,
+                                    fontFamily: "Montserrat",
+                                    fontWeight: FontWeight.bold,
+                                    color: Colors.black),
+                              ),
+                              alignment: Alignment.center,
+                            ),
+                          ),
+                        ),
+                        Expanded(
+                          child: Padding(
+                            padding: EdgeInsets.fromLTRB(0, 0, 15.0, 0),
+                            child: Align(
+                              child: Text(
+                                "110",
+                                style: TextStyle(
+                                    fontSize: 18.0,
+                                    fontFamily: "Montserrat",
+                                    fontWeight: FontWeight.bold,
+                                    color: Colors.black),
+                              ),
+                              alignment: Alignment.centerRight,
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                    const SizedBox(height: 20),
+                    Row(
+                      children: const <Widget>[
+                        Expanded(
+                          child: Padding(
+                            padding: EdgeInsets.fromLTRB(15.0, 0.0, 0.0, 0),
+                            child: Align(
+                              child: Text(
+                                "ON",
+                                textAlign: TextAlign.center,
+                                style: TextStyle(
+                                    fontSize: 18.0,
+                                    fontFamily: "Montserrat",
+                                    fontWeight: FontWeight.bold,
+                                    color: Colors.black),
+                              ),
+                              alignment: Alignment.centerLeft,
+                            ),
+                          ),
+                        ),
+                        Expanded(
+                          child: Padding(
+                            padding: EdgeInsets.fromLTRB(0, 0.0, 0.0, 0),
+                            child: Align(
+                              child: Text(
+                                "OFF",
+                                textAlign: TextAlign.center,
+                                style: TextStyle(
+                                    fontSize: 18.0,
+                                    fontFamily: "Montserrat",
+                                    fontWeight: FontWeight.bold,
+                                    color: Colors.black),
+                              ),
+                              alignment: Alignment.center,
+                            ),
+                          ),
+                        ),
+                        Expanded(
+                          child: Padding(
+                            padding: EdgeInsets.fromLTRB(0, 0, 15.0, 0),
+                            child: Align(
+                              child: Text(
+                                "NC",
+                                style: TextStyle(
+                                    fontSize: 18.0,
+                                    fontFamily: "Montserrat",
+                                    fontWeight: FontWeight.bold,
+                                    color: Colors.black),
+                              ),
+                              alignment: Alignment.centerRight,
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                    const SizedBox(height: 10),
+                    Row(
+                      children: const <Widget>[
+                        Expanded(
+                          child: Padding(
+                            padding: EdgeInsets.fromLTRB(20.0, 0.0, 0.0, 0),
+                            child: Align(
+                              child: Text(
+                                "30",
+                                textAlign: TextAlign.center,
+                                style: TextStyle(
+                                    fontSize: 18.0,
+                                    fontFamily: "Montserrat",
+                                    fontWeight: FontWeight.bold,
+                                    color: Colors.black),
+                              ),
+                              alignment: Alignment.centerLeft,
+                            ),
+                          ),
+                        ),
+                        Expanded(
+                          child: Padding(
+                            padding: EdgeInsets.fromLTRB(0, 0.0, 0.0, 0),
+                            child: Align(
+                              child: Text(
+                                "40",
+                                textAlign: TextAlign.center,
+                                style: TextStyle(
+                                    fontSize: 18.0,
+                                    fontFamily: "Montserrat",
+                                    fontWeight: FontWeight.bold,
+                                    color: Colors.black),
+                              ),
+                              alignment: Alignment.center,
+                            ),
+                          ),
+                        ),
+                        Expanded(
+                          child: Padding(
+                            padding: EdgeInsets.fromLTRB(0, 0, 20.0, 0),
+                            child: Align(
+                              child: Text(
+                                "40",
+                                style: TextStyle(
+                                    fontSize: 18.0,
+                                    fontFamily: "Montserrat",
+                                    fontWeight: FontWeight.bold,
+                                    color: Colors.black),
+                              ),
+                              alignment: Alignment.centerRight,
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                    const SizedBox(height: 20),
+                    Row(
+                      children: const <Widget>[
+                        Expanded(
+                          child: Padding(
+                            padding: EdgeInsets.fromLTRB(20.0, 0.0, 0.0, 0),
+                            child: Align(
+                              child: Icon(Icons.add),
+                              alignment: Alignment.centerLeft,
+                            ),
+                          ),
+                        ),
+
+                        Expanded(
+                          child: Padding(
+                            padding: EdgeInsets.fromLTRB(0, 0, 20.0, 0),
+                            child: Align(
+                              child: Icon(Icons.settings),
+                              alignment: Alignment.centerRight,
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                    const SizedBox(height: 20),
+                  ])),
+            ])));
   }
 }
