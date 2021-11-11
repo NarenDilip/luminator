@@ -34,48 +34,48 @@ class dashboard_screenState extends State<dashboard_screen> {
         items: const [
           BottomNavigationBarItem(
             icon: Icon(
-              Feather.home,
+              Icons.qr_code,
               color: Colors.grey,
             ),
             title: Text('QR Scan'),
             activeIcon: Icon(
-              Feather.home,
+              Icons.qr_code,
               color: Colors.purple,
             ),
           ),
           BottomNavigationBarItem(
             icon: Icon(
-              FontAwesome.calendar,
+              Icons.list,
               color: Colors.grey,
             ),
             title: Text('Search List'),
             activeIcon: Icon(
-              FontAwesome.calendar,
+              Icons.list,
               color: Colors.purple,
             ),
           ),
           BottomNavigationBarItem(
             icon: Icon(
-              EvilIcons.user,
+              Icons.map,
               color: Colors.grey,
               size: 36,
             ),
             title: Text('Map View'),
             activeIcon: Icon(
-              EvilIcons.user,
+              Icons.map,
               color: Colors.purple,
               size: 36,
             ),
           ),
           BottomNavigationBarItem(
             icon: Icon(
-              EvilIcons.user,
+              Icons.analytics,
               color: Colors.grey,
               size: 36,
             ),
             title: Text('Dashboard'),
             activeIcon: Icon(
-              EvilIcons.user,
+              Icons.analytics,
               color: Colors.purple,
               size: 36,
             ),

@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:luminator/src/ui/login/login_screen.dart';
+import 'package:luminator/src/ui/dashboard/ListItem.dart';
 
 class qr_scanner_screen extends StatefulWidget {
   @override
@@ -12,11 +12,11 @@ class qr_scanner_screen extends StatefulWidget {
 class qr_scanner_screen_state extends State<qr_scanner_screen> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(body: ScanForm());
+    return Scaffold(body: MapviewForm());
   }
 }
 
-class ScanForm extends StatelessWidget {
+class MapviewForm extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
@@ -42,7 +42,7 @@ class ScanForm extends StatelessWidget {
                     SizedBox(
                       width: double.infinity,
                       child: Text(
-                        "QR Scan",
+                        "Scan QR",
                         textAlign: TextAlign.center,
                         style: TextStyle(
                             fontSize: 30.0,
@@ -55,3 +55,5 @@ class ScanForm extends StatelessWidget {
                 ))));
   }
 }
+
+
