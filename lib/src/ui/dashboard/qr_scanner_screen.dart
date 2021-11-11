@@ -35,9 +35,9 @@ class MapviewForm extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: const <Widget>[
                     Image(
-                        image: AssetImage("assets/icons/logo.png"),
-                        height: 75,
-                        width: 75),
+                        image: AssetImage("assets/icons/qr.png"),
+                        height: 175,
+                        width: 175),
                     SizedBox(height: 20),
                     SizedBox(
                       width: double.infinity,
