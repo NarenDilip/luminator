@@ -19,7 +19,12 @@ class device_count_screen_state extends State<device_count_screen> {
   var dropDownValue = "";
   @override
   Widget build(BuildContext context) {
-    return Scaffold(appBar:AppBar(title: Text("Scanner"),),body: Container(
+    return Scaffold(appBar:AppBar(title: const Text("Luminator", style: TextStyle(
+      color: Colors.black,
+      fontSize: 18,
+      fontWeight: FontWeight.bold,
+      fontFamily: "Montserrat",
+    )),),body: Container(
       child: Column(
         children: [
           Padding(padding: EdgeInsets.all(4),child: Row(
@@ -71,7 +76,9 @@ class DeviceCountForm extends StatelessWidget {
                   child:
                       Column(mainAxisSize: MainAxisSize.min, children: <Widget>[
                     const SizedBox(height: 10),
-                    Row(
+                        Container(
+                          color: Colors.white,
+                          child: Row(
                       children: const <Widget>[
                         Expanded(
                           child: Padding(
@@ -102,13 +109,73 @@ class DeviceCountForm extends StatelessWidget {
                           child: Padding(
                             padding: EdgeInsets.fromLTRB(0, 0, 15.0, 0),
                             child: Align(
+                              child: CircleAvatar(
+                                backgroundColor: Colors.blue,
+                                child: Center(
+                                  child: Text(
+                                    "110",
+                                    style: TextStyle(
+                                        fontSize: 16.0,
+                                        fontFamily: "Montserrat",
+                                        fontWeight: FontWeight.bold,
+                                        color: Colors.white),
+                                  ),
+                                ),
+                              ),
+                              alignment: Alignment.centerRight,
+                            ),
+                          ),
+                        ),
+                      ],
+                    )),
+                    const SizedBox(height: 10),
+                    Row(
+                      children: const <Widget>[
+                        Expanded(
+                          child: Padding(
+                            padding: EdgeInsets.fromLTRB(40.0, 0.0, 0.0, 0),
+                            child: Align(
                               child: Text(
-                                "100",
+                                "ON",
+                                textAlign: TextAlign.center,
                                 style: TextStyle(
-                                    fontSize: 18.0,
+                                    fontSize: 16.0,
                                     fontFamily: "Montserrat",
                                     fontWeight: FontWeight.bold,
-                                    color: Colors.black),
+                                    color: Colors.grey),
+                              ),
+                              alignment: Alignment.centerLeft,
+                            ),
+                          ),
+                        ),
+                        Expanded(
+                          child: Padding(
+                            padding: EdgeInsets.fromLTRB(0, 0.0, 0.0, 0),
+                            child: Align(
+                              child: Text(
+                                "OFF",
+                                textAlign: TextAlign.center,
+                                style: TextStyle(
+                                    fontSize: 16.0,
+                                    fontFamily: "Montserrat",
+                                    fontWeight: FontWeight.bold,
+                                    color: Colors.grey),
+                              ),
+                              alignment: Alignment.center,
+                            ),
+                          ),
+                        ),
+                        Expanded(
+                          child: Padding(
+                            padding: EdgeInsets.fromLTRB(0, 0, 40.0, 0),
+                            child: Align(
+                              child: Text(
+                                "NC",
+                                style: TextStyle(
+                                    fontSize: 16.0,
+                                    fontFamily: "Montserrat",
+                                    fontWeight: FontWeight.bold,
+                                    color: Colors.grey),
                               ),
                               alignment: Alignment.centerRight,
                             ),
@@ -116,151 +183,85 @@ class DeviceCountForm extends StatelessWidget {
                         ),
                       ],
                     ),
-                        const SizedBox(height: 10),
-                        Row(
-                          children: const <Widget>[
-                            Expanded(
-                              child: Padding(
-                                padding: EdgeInsets.fromLTRB(15.0, 0.0, 0.0, 0),
-                                child: Align(
-                                  child: Text(
-                                    "ON",
-                                    textAlign: TextAlign.center,
-                                    style: TextStyle(
-                                        fontSize: 18.0,
-                                        fontFamily: "Montserrat",
-                                        fontWeight: FontWeight.bold,
-                                        color: Colors.black),
-                                  ),
-                                  alignment: Alignment.centerLeft,
-                                ),
-                              ),
-                            ),
-                            Expanded(
-                              child: Padding(
-                                padding: EdgeInsets.fromLTRB(0, 0.0, 0.0, 0),
-                                child: Align(
-                                  child: Text(
-                                    "OFF",
-                                    textAlign: TextAlign.center,
-                                    style: TextStyle(
-                                        fontSize: 18.0,
-                                        fontFamily: "Montserrat",
-                                        fontWeight: FontWeight.bold,
-                                        color: Colors.black),
-                                  ),
-                                  alignment: Alignment.center,
-                                ),
-                              ),
-                            ),
-                            Expanded(
-                              child: Padding(
-                                padding: EdgeInsets.fromLTRB(0, 0, 15.0, 0),
-                                child: Align(
-                                  child: Text(
-                                    "NC",
-                                    style: TextStyle(
-                                        fontSize: 18.0,
-                                        fontFamily: "Montserrat",
-                                        fontWeight: FontWeight.bold,
-                                        color: Colors.black),
-                                  ),
-                                  alignment: Alignment.centerRight,
-                                ),
-                              ),
-                            ),
-                          ],
-                        ),
-                        const SizedBox(height: 10),
-                        Row(
-                          children: const <Widget>[
-                            Expanded(
-                              child: Padding(
-                                padding: EdgeInsets.fromLTRB(20.0, 0.0, 0.0, 0),
-                                child: Align(
+                    const SizedBox(height: 10),
+                    Row(
+                      children: const <Widget>[
+                        Expanded(
+                          child: Padding(
+                            padding: EdgeInsets.fromLTRB(30.0, 0.0, 0.0, 0),
+                            child: Align(
+                              child: CircleAvatar(
+                                backgroundColor: Colors.green,
+                                child: Center(
                                   child: Text(
                                     "30",
-                                    textAlign: TextAlign.center,
                                     style: TextStyle(
-                                        fontSize: 18.0,
+                                        fontSize: 16.0,
                                         fontFamily: "Montserrat",
                                         fontWeight: FontWeight.bold,
-                                        color: Colors.black),
+                                        color: Colors.white),
                                   ),
-                                  alignment: Alignment.centerLeft,
                                 ),
                               ),
+                              alignment: Alignment.centerLeft,
                             ),
-                            Expanded(
-                              child: Padding(
-                                padding: EdgeInsets.fromLTRB(0, 0.0, 0.0, 0),
-                                child: Align(
-                                  child: Text(
-                                    "40",
-                                    textAlign: TextAlign.center,
-                                    style: TextStyle(
-                                        fontSize: 18.0,
-                                        fontFamily: "Montserrat",
-                                        fontWeight: FontWeight.bold,
-                                        color: Colors.black),
-                                  ),
-                                  alignment: Alignment.center,
-                                ),
-                              ),
-                            ),
-                            Expanded(
-                              child: Padding(
-                                padding: EdgeInsets.fromLTRB(0, 0, 20.0, 0),
-                                child: Align(
+                          ),
+                        ),
+                        Expanded(
+                          child: Padding(
+                            padding: EdgeInsets.fromLTRB(0, 0.0, 0.0, 0),
+                            child: Align(
+                              child: CircleAvatar(
+                                backgroundColor: Colors.red,
+                                child: Center(
                                   child: Text(
                                     "40",
                                     style: TextStyle(
-                                        fontSize: 18.0,
+                                        fontSize: 16.0,
                                         fontFamily: "Montserrat",
                                         fontWeight: FontWeight.bold,
-                                        color: Colors.black),
+                                        color: Colors.white),
                                   ),
-                                  alignment: Alignment.centerRight,
                                 ),
                               ),
+                              alignment: Alignment.center,
                             ),
-                          ],
+                          ),
                         ),
-                        const SizedBox(height: 10),
-                        Row(
-                          children: const <Widget>[
-                            Expanded(
-                              child: Padding(
-                                padding: EdgeInsets.fromLTRB(20.0, 0.0, 0.0, 0),
-                                child: Align(
-                                  child: Icon(Icons.add),
-                                  alignment: Alignment.centerLeft,
+                        Expanded(
+                          child: Padding(
+                            padding: EdgeInsets.fromLTRB(0, 0, 30.0, 0),
+                            child: Align(
+                              child: CircleAvatar(
+                                backgroundColor: Colors.orange,
+                                child: Center(
+                                  child: Text(
+                                    "40",
+                                    style: TextStyle(
+                                        fontSize: 16.0,
+                                        fontFamily: "Montserrat",
+                                        fontWeight: FontWeight.bold,
+                                        color: Colors.white),
+                                  ),
                                 ),
                               ),
+                              alignment: Alignment.centerRight,
                             ),
-
-                            Expanded(
-                              child: Padding(
-                                padding: EdgeInsets.fromLTRB(0, 0, 20.0, 0),
-                                child: Align(
-                                  child: Icon(Icons.settings),
-                                  alignment: Alignment.centerRight,
-                                ),
-                              ),
-                            ),
-                          ],
+                          ),
                         ),
-                        const SizedBox(height: 20),
+                      ],
+                    ),
+                    const SizedBox(height: 20),
                   ])),
-              const SizedBox(height: 20),
+              const SizedBox(height: 10),
               Card(
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(15.0),
                   ),
                   elevation: 10,
                   child:
-                  Column(mainAxisSize: MainAxisSize.min, children: <Widget>[
-                    const SizedBox(height: 20),
+                      Column(mainAxisSize: MainAxisSize.min, children: <Widget>[
+                    const SizedBox(height: 10),
                     Row(
                       children: const <Widget>[
                         Expanded(
@@ -292,13 +293,18 @@ class DeviceCountForm extends StatelessWidget {
                           child: Padding(
                             padding: EdgeInsets.fromLTRB(0, 0, 15.0, 0),
                             child: Align(
-                              child: Text(
-                                "50",
-                                style: TextStyle(
-                                    fontSize: 18.0,
-                                    fontFamily: "Montserrat",
-                                    fontWeight: FontWeight.bold,
-                                    color: Colors.black),
+                              child: CircleAvatar(
+                                backgroundColor: Colors.blue,
+                                child: Center(
+                                  child: Text(
+                                    "110",
+                                    style: TextStyle(
+                                        fontSize: 16.0,
+                                        fontFamily: "Montserrat",
+                                        fontWeight: FontWeight.bold,
+                                        color: Colors.white),
+                                  ),
+                                ),
                               ),
                               alignment: Alignment.centerRight,
                             ),
@@ -306,21 +312,21 @@ class DeviceCountForm extends StatelessWidget {
                         ),
                       ],
                     ),
-                    const SizedBox(height: 20),
+                    const SizedBox(height: 10),
                     Row(
                       children: const <Widget>[
                         Expanded(
                           child: Padding(
-                            padding: EdgeInsets.fromLTRB(15.0, 0.0, 0.0, 0),
+                            padding: EdgeInsets.fromLTRB(40.0, 0.0, 0.0, 0),
                             child: Align(
                               child: Text(
                                 "ON",
                                 textAlign: TextAlign.center,
                                 style: TextStyle(
-                                    fontSize: 18.0,
+                                    fontSize: 16.0,
                                     fontFamily: "Montserrat",
                                     fontWeight: FontWeight.bold,
-                                    color: Colors.black),
+                                    color: Colors.grey),
                               ),
                               alignment: Alignment.centerLeft,
                             ),
@@ -334,10 +340,10 @@ class DeviceCountForm extends StatelessWidget {
                                 "OFF",
                                 textAlign: TextAlign.center,
                                 style: TextStyle(
-                                    fontSize: 18.0,
+                                    fontSize: 16.0,
                                     fontFamily: "Montserrat",
                                     fontWeight: FontWeight.bold,
-                                    color: Colors.black),
+                                    color: Colors.grey),
                               ),
                               alignment: Alignment.center,
                             ),
@@ -345,15 +351,15 @@ class DeviceCountForm extends StatelessWidget {
                         ),
                         Expanded(
                           child: Padding(
-                            padding: EdgeInsets.fromLTRB(0, 0, 15.0, 0),
+                            padding: EdgeInsets.fromLTRB(0, 0, 40.0, 0),
                             child: Align(
                               child: Text(
                                 "NC",
                                 style: TextStyle(
-                                    fontSize: 18.0,
+                                    fontSize: 16.0,
                                     fontFamily: "Montserrat",
                                     fontWeight: FontWeight.bold,
-                                    color: Colors.black),
+                                    color: Colors.grey),
                               ),
                               alignment: Alignment.centerRight,
                             ),
@@ -366,16 +372,20 @@ class DeviceCountForm extends StatelessWidget {
                       children: const <Widget>[
                         Expanded(
                           child: Padding(
-                            padding: EdgeInsets.fromLTRB(20.0, 0.0, 0.0, 0),
+                            padding: EdgeInsets.fromLTRB(30.0, 0.0, 0.0, 0),
                             child: Align(
-                              child: Text(
-                                "30",
-                                textAlign: TextAlign.center,
-                                style: TextStyle(
-                                    fontSize: 18.0,
-                                    fontFamily: "Montserrat",
-                                    fontWeight: FontWeight.bold,
-                                    color: Colors.black),
+                              child: CircleAvatar(
+                                backgroundColor: Colors.green,
+                                child: Center(
+                                  child: Text(
+                                    "30",
+                                    style: TextStyle(
+                                        fontSize: 16.0,
+                                        fontFamily: "Montserrat",
+                                        fontWeight: FontWeight.bold,
+                                        color: Colors.white),
+                                  ),
+                                ),
                               ),
                               alignment: Alignment.centerLeft,
                             ),
@@ -385,14 +395,18 @@ class DeviceCountForm extends StatelessWidget {
                           child: Padding(
                             padding: EdgeInsets.fromLTRB(0, 0.0, 0.0, 0),
                             child: Align(
-                              child: Text(
-                                "40",
-                                textAlign: TextAlign.center,
-                                style: TextStyle(
-                                    fontSize: 18.0,
-                                    fontFamily: "Montserrat",
-                                    fontWeight: FontWeight.bold,
-                                    color: Colors.black),
+                              child: CircleAvatar(
+                                backgroundColor: Colors.red,
+                                child: Center(
+                                  child: Text(
+                                    "40",
+                                    style: TextStyle(
+                                        fontSize: 16.0,
+                                        fontFamily: "Montserrat",
+                                        fontWeight: FontWeight.bold,
+                                        color: Colors.white),
+                                  ),
+                                ),
                               ),
                               alignment: Alignment.center,
                             ),
@@ -400,40 +414,21 @@ class DeviceCountForm extends StatelessWidget {
                         ),
                         Expanded(
                           child: Padding(
-                            padding: EdgeInsets.fromLTRB(0, 0, 20.0, 0),
+                            padding: EdgeInsets.fromLTRB(0, 0, 30.0, 0),
                             child: Align(
-                              child: Text(
-                                "40",
-                                style: TextStyle(
-                                    fontSize: 18.0,
-                                    fontFamily: "Montserrat",
-                                    fontWeight: FontWeight.bold,
-                                    color: Colors.black),
+                              child: CircleAvatar(
+                                backgroundColor: Colors.orange,
+                                child: Center(
+                                  child: Text(
+                                    "40",
+                                    style: TextStyle(
+                                        fontSize: 16.0,
+                                        fontFamily: "Montserrat",
+                                        fontWeight: FontWeight.bold,
+                                        color: Colors.white),
+                                  ),
+                                ),
                               ),
-                              alignment: Alignment.centerRight,
-                            ),
-                          ),
-                        ),
-                      ],
-                    ),
-                    const SizedBox(height: 20),
-                    Row(
-                      children: const <Widget>[
-                        Expanded(
-                          child: Padding(
-                            padding: EdgeInsets.fromLTRB(20.0, 0.0, 0.0, 0),
-                            child: Align(
-                              child: Icon(Icons.add),
-                              alignment: Alignment.centerLeft,
-                            ),
-                          ),
-                        ),
-
-                        Expanded(
-                          child: Padding(
-                            padding: EdgeInsets.fromLTRB(0, 0, 20.0, 0),
-                            child: Align(
-                              child: Icon(Icons.settings),
                               alignment: Alignment.centerRight,
                             ),
                           ),
@@ -442,15 +437,15 @@ class DeviceCountForm extends StatelessWidget {
                     ),
                     const SizedBox(height: 20),
                   ])),
-              const SizedBox(height: 20),
+              const SizedBox(height: 10),
               Card(
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(15.0),
                   ),
                   elevation: 10,
                   child:
-                  Column(mainAxisSize: MainAxisSize.min, children: <Widget>[
-                    const SizedBox(height: 20),
+                      Column(mainAxisSize: MainAxisSize.min, children: <Widget>[
+                    const SizedBox(height: 10),
                     Row(
                       children: const <Widget>[
                         Expanded(
@@ -482,13 +477,18 @@ class DeviceCountForm extends StatelessWidget {
                           child: Padding(
                             padding: EdgeInsets.fromLTRB(0, 0, 15.0, 0),
                             child: Align(
-                              child: Text(
-                                "110",
-                                style: TextStyle(
-                                    fontSize: 18.0,
-                                    fontFamily: "Montserrat",
-                                    fontWeight: FontWeight.bold,
-                                    color: Colors.black),
+                              child: CircleAvatar(
+                                backgroundColor: Colors.blue,
+                                child: Center(
+                                  child: Text(
+                                    "110",
+                                      style: TextStyle(
+                                          fontSize: 16.0,
+                                          fontFamily: "Montserrat",
+                                          fontWeight: FontWeight.bold,
+                                          color: Colors.white),
+                                  ),
+                                ),
                               ),
                               alignment: Alignment.centerRight,
                             ),
@@ -496,12 +496,12 @@ class DeviceCountForm extends StatelessWidget {
                         ),
                       ],
                     ),
-                    const SizedBox(height: 20),
+                    const SizedBox(height: 10),
                     Row(
                       children: const <Widget>[
                         Expanded(
                           child: Padding(
-                            padding: EdgeInsets.fromLTRB(15.0, 0.0, 0.0, 0),
+                            padding: EdgeInsets.fromLTRB(40.0, 0.0, 0.0, 0),
                             child: Align(
                               child: Text(
                                 "ON",
@@ -510,7 +510,7 @@ class DeviceCountForm extends StatelessWidget {
                                     fontSize: 18.0,
                                     fontFamily: "Montserrat",
                                     fontWeight: FontWeight.bold,
-                                    color: Colors.black),
+                                    color: Colors.grey),
                               ),
                               alignment: Alignment.centerLeft,
                             ),
@@ -527,7 +527,7 @@ class DeviceCountForm extends StatelessWidget {
                                     fontSize: 18.0,
                                     fontFamily: "Montserrat",
                                     fontWeight: FontWeight.bold,
-                                    color: Colors.black),
+                                    color: Colors.grey),
                               ),
                               alignment: Alignment.center,
                             ),
@@ -535,7 +535,7 @@ class DeviceCountForm extends StatelessWidget {
                         ),
                         Expanded(
                           child: Padding(
-                            padding: EdgeInsets.fromLTRB(0, 0, 15.0, 0),
+                            padding: EdgeInsets.fromLTRB(0, 0, 40.0, 0),
                             child: Align(
                               child: Text(
                                 "NC",
@@ -543,7 +543,7 @@ class DeviceCountForm extends StatelessWidget {
                                     fontSize: 18.0,
                                     fontFamily: "Montserrat",
                                     fontWeight: FontWeight.bold,
-                                    color: Colors.black),
+                                    color: Colors.grey),
                               ),
                               alignment: Alignment.centerRight,
                             ),
@@ -556,16 +556,20 @@ class DeviceCountForm extends StatelessWidget {
                       children: const <Widget>[
                         Expanded(
                           child: Padding(
-                            padding: EdgeInsets.fromLTRB(20.0, 0.0, 0.0, 0),
+                            padding: EdgeInsets.fromLTRB(30.0, 0.0, 0.0, 0),
                             child: Align(
-                              child: Text(
-                                "30",
-                                textAlign: TextAlign.center,
-                                style: TextStyle(
-                                    fontSize: 18.0,
-                                    fontFamily: "Montserrat",
-                                    fontWeight: FontWeight.bold,
-                                    color: Colors.black),
+                              child: CircleAvatar(
+                                backgroundColor: Colors.green,
+                                child: Center(
+                                  child: Text(
+                                    "30",
+                                    style: TextStyle(
+                                        fontSize: 16.0,
+                                        fontFamily: "Montserrat",
+                                        fontWeight: FontWeight.bold,
+                                        color: Colors.white),
+                                  ),
+                                ),
                               ),
                               alignment: Alignment.centerLeft,
                             ),
@@ -575,14 +579,18 @@ class DeviceCountForm extends StatelessWidget {
                           child: Padding(
                             padding: EdgeInsets.fromLTRB(0, 0.0, 0.0, 0),
                             child: Align(
-                              child: Text(
-                                "40",
-                                textAlign: TextAlign.center,
-                                style: TextStyle(
-                                    fontSize: 18.0,
-                                    fontFamily: "Montserrat",
-                                    fontWeight: FontWeight.bold,
-                                    color: Colors.black),
+                              child: CircleAvatar(
+                                backgroundColor: Colors.red,
+                                child: Center(
+                                  child: Text(
+                                    "40",
+                                    style: TextStyle(
+                                        fontSize: 16.0,
+                                        fontFamily: "Montserrat",
+                                        fontWeight: FontWeight.bold,
+                                        color: Colors.white),
+                                  ),
+                                ),
                               ),
                               alignment: Alignment.center,
                             ),
@@ -590,40 +598,21 @@ class DeviceCountForm extends StatelessWidget {
                         ),
                         Expanded(
                           child: Padding(
-                            padding: EdgeInsets.fromLTRB(0, 0, 20.0, 0),
+                            padding: EdgeInsets.fromLTRB(0, 0, 30.0, 0),
                             child: Align(
-                              child: Text(
-                                "40",
-                                style: TextStyle(
-                                    fontSize: 18.0,
-                                    fontFamily: "Montserrat",
-                                    fontWeight: FontWeight.bold,
-                                    color: Colors.black),
+                              child: CircleAvatar(
+                                backgroundColor: Colors.orange,
+                                child: Center(
+                                  child: Text(
+                                    "40",
+                                    style: TextStyle(
+                                        fontSize: 16.0,
+                                        fontFamily: "Montserrat",
+                                        fontWeight: FontWeight.bold,
+                                        color: Colors.white),
+                                  ),
+                                ),
                               ),
-                              alignment: Alignment.centerRight,
-                            ),
-                          ),
-                        ),
-                      ],
-                    ),
-                    const SizedBox(height: 20),
-                    Row(
-                      children: const <Widget>[
-                        Expanded(
-                          child: Padding(
-                            padding: EdgeInsets.fromLTRB(20.0, 0.0, 0.0, 0),
-                            child: Align(
-                              child: Icon(Icons.add),
-                              alignment: Alignment.centerLeft,
-                            ),
-                          ),
-                        ),
-
-                        Expanded(
-                          child: Padding(
-                            padding: EdgeInsets.fromLTRB(0, 0, 20.0, 0),
-                            child: Align(
-                              child: Icon(Icons.settings),
                               alignment: Alignment.centerRight,
                             ),
                           ),

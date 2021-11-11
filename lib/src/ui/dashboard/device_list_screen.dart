@@ -20,7 +20,13 @@ class device_list_screen_state extends State<device_list_screen> {
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
-    return Scaffold(body: Scaffold(appBar:AppBar(title: Text("Scanner"),),body: Container(
+    return Scaffold(body: Scaffold(
+        appBar:AppBar(title: const Text("Luminator", style: TextStyle(
+          color: Colors.black,
+          fontSize: 18,
+          fontWeight: FontWeight.bold,
+          fontFamily: "Montserrat",
+        )),),body: Container(
         height: size.height,
         width: double.infinity,
         decoration: const BoxDecoration(
@@ -94,39 +100,99 @@ class device_list_screen_state extends State<device_list_screen> {
 class DeviceForm extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    Size size = MediaQuery.of(context).size;
+    Size size = MediaQuery
+        .of(context)
+        .size;
     return SingleChildScrollView(
         child: Container(
-            height: size.height,
-            width: double.infinity,
-            decoration: const BoxDecoration(
-              image: DecorationImage(
-                image: AssetImage("assets/icons/background_img.jpeg"),
-                fit: BoxFit.cover,
-              ),
+            padding: new EdgeInsets.all(10.0),
+            child: Column(mainAxisSize: MainAxisSize.min, children: <Widget>[
+
+            const SizedBox(
+            height: 50,
             ),
-            child: Form(
+            Card(
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(15.0),
+                ),
+                elevation: 10,
+
                 child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: const <Widget>[
-                    Image(
-                        image: AssetImage("assets/icons/logo.png"),
-                        height: 75,
-                        width: 75),
-                    SizedBox(height: 20),
-                    SizedBox(
-                      width: double.infinity,
-                      child: Text(
-                        "Device List",
-                        textAlign: TextAlign.center,
-                        style: TextStyle(
-                            fontSize: 30.0,
-                            fontFamily: "Montserrat",
-                            fontWeight: FontWeight.bold,
-                            color: Colors.black),
-                      ),
-                    ),
-                  ],
-                ))));
+                    mainAxisSize: MainAxisSize.min, children: const <Widget>[
+
+                  TextField(
+                    style: TextStyle(
+                        fontSize: 18.0,
+                        fontFamily: "Montserrat",
+                        fontWeight: FontWeight.bold,
+                        color: Colors.black),
+                    decoration: InputDecoration(
+                        labelText: 'ILM Nodes', suffixIcon: Icon(Icons.search)),
+                  ),
+                ])),
+
+            Card(
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(15.0),
+                ),
+                elevation: 10,
+
+                child: Column(
+                    mainAxisSize: MainAxisSize.min, children: const <Widget>[
+
+                  TextField(
+                    style: TextStyle(
+                        fontSize: 18.0,
+                        fontFamily: "Montserrat",
+                        fontWeight: FontWeight.bold,
+                        color: Colors.black),
+                    decoration: InputDecoration(
+                        labelText: 'Pole Numbers',
+                        suffixIcon: Icon(Icons.search)),
+                  ),
+                ])),
+            Card(
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(15.0),
+                ),
+                elevation: 10,
+
+                child: Column(
+                    mainAxisSize: MainAxisSize.min, children: const <Widget>[
+
+                  TextField(
+                    style: TextStyle(
+                        fontSize: 18.0,
+                        fontFamily: "Montserrat",
+                        fontWeight: FontWeight.bold,
+                        color: Colors.black),
+                    decoration: InputDecoration(
+                        labelText: 'CCMS Numbers',
+                        suffixIcon: Icon(Icons.search)),
+                  ),
+                ])),
+
+            Card(
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(15.0),
+                ),
+                elevation: 10,
+
+                child: Column(
+                    mainAxisSize: MainAxisSize.min, children: const < Widget>[
+                Padding(
+                    padding: EdgeInsets.fromLTRB(15.0, 0.0, 0.0, 0),
+                child: TextField(
+                  style: TextStyle(
+                      fontSize: 18.0,
+                      fontFamily: "Montserrat",
+                      fontWeight: FontWeight.bold,
+                      color: Colors.black),
+                  decoration: InputDecoration(
+                      labelText: 'GATEWAY Numbers',
+                      suffixIcon: Icon(Icons.search)),
+                )),
+                ])),
+        ])));
   }
 }
