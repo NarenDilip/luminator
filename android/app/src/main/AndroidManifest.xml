@@ -3,6 +3,8 @@
    <application
         android:label="luminator"
         android:icon="@mipmap/ic_launcher">
+       <meta-data android:name="com.google.android.geo.API_KEY"
+           android:value="AIzaSyCWzAjupbV1ZQFVpcQb3n3f5apTa1dpzQo"/>
         <activity
             android:name=".MainActivity"
             android:launchMode="singleTop"

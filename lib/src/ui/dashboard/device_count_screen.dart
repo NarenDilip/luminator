@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:luminator/src/ui/components/dropdown_button_field.dart';
 import 'package:luminator/src/ui/login/login_screen.dart';
 
 class device_count_screen extends StatefulWidget {
@@ -10,9 +11,46 @@ class device_count_screen extends StatefulWidget {
 }
 
 class device_count_screen_state extends State<device_count_screen> {
+  List <String> spinnerList = [
+    'One',
+    'Two',
+    'Three',
+  ] ;
+  var dropDownValue = "";
   @override
   Widget build(BuildContext context) {
-    return Scaffold(body: DeviceCountForm());
+    return Scaffold(appBar:AppBar(title: Text("Scanner"),),body: Container(
+      child: Column(
+        children: [
+          Padding(padding: EdgeInsets.all(4),child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            children: [
+              Expanded(child:   DropdownButtonField(dropdownValue: dropDownValue,onChanged: (value){
+                setState(() {
+                  dropDownValue = value;
+                });
+              },spinnerItems: spinnerList)),
+              SizedBox(width: 4,),
+              Expanded(child:   DropdownButtonField(dropdownValue: dropDownValue,onChanged: (value){
+                setState(() {
+                  dropDownValue = value;
+                });
+              },spinnerItems: spinnerList)),
+              SizedBox(width: 4,),
+              Expanded(child:   DropdownButtonField(dropdownValue: dropDownValue,onChanged: (value){
+                setState(() {
+                  dropDownValue = value;
+                });
+              },spinnerItems: spinnerList)),
+
+            ],
+          ),),
+          Expanded(child: SingleChildScrollView(
+            child: DeviceCountForm(),
+          ))
+        ],
+      ),
+    ));
   }
 }
 
@@ -24,6 +62,7 @@ class DeviceCountForm extends StatelessWidget {
         child: Container(
             padding: new EdgeInsets.all(10.0),
             child: Column(mainAxisSize: MainAxisSize.min, children: <Widget>[
+
               Card(
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(15.0),
