@@ -5,13 +5,14 @@ const buttonColor = Color(0xff3bbce3);
 const orangeColor = Color(0xfff1a146);
 const barColor = Color(0xff30b2b0);
 const barMarkerColor = Color(0xffb3b3b3);
-const invBorderColor = Color(0xff979797);
 const invListBackgroundColor = Color(0xff383838);
 const purpleColor = Color(0xff693e9e);
 const borderColor = Color(0xffd5d5d5);
 const dashboardThemeColor = Color(0xffc2cbf7);
 const successGreenColor = Color(0xff16e38a);
 const btnLightGreenColor = Color(0xff35ba80);
+const gray = Color(0xff979797);
+const white = Color(0xffffffff);
 //
 
 const splashscreen_text = "Luminator";

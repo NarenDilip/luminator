@@ -4,7 +4,6 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:luminator/src/ui/components/dropdown_button_field.dart';
-import 'package:luminator/src/ui/login/login_screen.dart';
 
 class map_view_screen extends StatefulWidget {
   @override
@@ -22,7 +21,7 @@ class map_view_screen_state extends State<map_view_screen> {
 
   var dropDownValue = "";
   final Completer<GoogleMapController> _controller = Completer();
-
+  GlobalKey<map_view_screen_state> mapKey = GlobalKey<map_view_screen_state>();
   static const CameraPosition _kGooglePlex = CameraPosition(
     target: LatLng(37.42796133580664, -122.085749655962),
     zoom: 14.00
