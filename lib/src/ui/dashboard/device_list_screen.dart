@@ -253,155 +253,162 @@ class device_list_screen_state extends State<device_list_screen> {
                                 ],
                               )),
                         )),
-                    Card(
-                      child: Column(
-                        children: [
-                          Row(
-                            children: [
-                              const Expanded(
-                                child: Padding(
-                                    padding: EdgeInsets.all(18.0),
-                                    child: Text(
-                                      'SEARCH',
-                                      style: TextStyle(
-                                        fontSize: 11.0,
-                                        color: Colors.lightBlue,
-                                      ),
-                                    )),
-                              ),
-                              Padding(
-                                padding: const EdgeInsets.only(right: 10),
-                                child: InkWell(
-                                  child: const Icon(
-                                    Icons.arrow_drop_down_sharp,
-                                    color: Colors.grey,
-                                  ),
-                                  onTap: () {
-                                    setState(() {
-                                      _ilmSearch = !_ilmSearch!;
-                                    });
-                                  },
-                                ),
-                              ),
-                            ],
-                          ),
-                          Visibility(
-                              visible: _ilmSearch!,
-                              child: Column(
-                                children: [
-                                  SearchTextField(
-                                    hint: "ILM Node",
-                                    controller: _ilmNode,
-                                  ),
-                                  SearchTextField(
-                                    hint: "Pole Number",
-                                    controller: _poleNumber,
-                                  ),
-                                  SearchTextField(
-                                    hint: "CCMS",
-                                    controller: _ccmsController,
-                                  ),
-                                  SearchTextField(
-                                    hint: "GateWay",
-                                    controller: _ilmNode,
-                                  ),
-                                  Container(
-                                      width: size.width,
-                                      padding: const EdgeInsets.only(
-                                          left: 10, right: 10),
-                                      child: ElevatedButton(
-                                        child: const Text("Search"),
-                                        onPressed: () {},
-                                      )),
-                                ],
-                              )),
-                        ],
-                      ),
-                    ),
-                    Card(
-                      child: Column(
-                        children: [
-                          DeviceListCard(
-                            labelName: "ILM List",
-                            onTab: () {
-                              setState(() {
-                                _isIlmList = !_isIlmList!;
-                              });
-                            },
-                          ),
-                          Visibility(visible:_isIlmList! ,child: ListView.builder(
-                              shrinkWrap: true,
-                              itemCount: 3,
-                              physics: const ClampingScrollPhysics(),
-                              itemBuilder: (context, index) {
-                                return GestureDetector(
-                                  child: Container(
-                                    margin: const EdgeInsets.only(
-                                        left: 10, top: 4, bottom: 4, right: 10),
-                                    child: Text("ABFHFG6576"),
-                                  ),
-                                  onTap: () {},
-                                );
-                              }))
-                        ],
-                      ),
-                    ),
-                    Card(
-                      child: Column(
-                        children: [
-                          DeviceListCard(
-                            labelName: "CCMS List",
-                            onTab: () {
-                              setState(() {
-                                _isCcmsList = !_isCcmsList!;
-                              });
-                            },
-                          ),
-                          Visibility(visible: _isCcmsList!,child: ListView.builder(
-                              shrinkWrap: true,
-                              itemCount: 3,
-                              physics: const ClampingScrollPhysics(),
-                              itemBuilder: (context, index) {
-                                return GestureDetector(
-                                  child: Container(
-                                    margin: const EdgeInsets.only(
-                                        left: 10, top: 4, bottom: 4, right: 10),
-                                    child: Text("ABFHFG6576"),
-                                  ),
-                                  onTap: () {},
-                                );
-                              }))
-                        ],
-                      ),
-                    ),
-                    Card(
-                      child: Column(
-                        children: [
-                          DeviceListCard(
-                            labelName: "GW List",
-                            onTab: () {
-                              setState(() {
-                                _isGwList = !_isGwList!;
-                              });
-                            },
-                          ),
-                          Visibility(visible: _isGwList!,child: ListView.builder(
-                              shrinkWrap: true,
-                              itemCount: 3,
-                              physics: const ClampingScrollPhysics(),
-                              itemBuilder: (context, index) {
-                                return GestureDetector(
-                                  child: Container(
-                                    margin: const EdgeInsets.only(
-                                        left: 10, top: 4, bottom: 4, right: 10),
-                                    child: Text("ABFHFG6576"),
-                                  ),
-                                  onTap: () {},
-                                );
-                              }))
-                        ],
-                      ),
-                    ),
+
+                   Expanded(child: SingleChildScrollView(
+                     child: Column(
+                       children: [
+                         Card(
+                           child: Column(
+                             children: [
+                               Row(
+                                 children: [
+                                   const Expanded(
+                                     child: Padding(
+                                         padding: EdgeInsets.all(18.0),
+                                         child: Text(
+                                           'SEARCH',
+                                           style: TextStyle(
+                                             fontSize: 11.0,
+                                             color: Colors.lightBlue,
+                                           ),
+                                         )),
+                                   ),
+                                   Padding(
+                                     padding: const EdgeInsets.only(right: 10),
+                                     child: InkWell(
+                                       child: const Icon(
+                                         Icons.arrow_drop_down_sharp,
+                                         color: Colors.grey,
+                                       ),
+                                       onTap: () {
+                                         setState(() {
+                                           _ilmSearch = !_ilmSearch!;
+                                         });
+                                       },
+                                     ),
+                                   ),
+                                 ],
+                               ),
+                               Visibility(
+                                   visible: _ilmSearch!,
+                                   child: Column(
+                                     children: [
+                                       SearchTextField(
+                                         hint: "ILM Node",
+                                         controller: _ilmNode,
+                                       ),
+                                       SearchTextField(
+                                         hint: "Pole Number",
+                                         controller: _poleNumber,
+                                       ),
+                                       SearchTextField(
+                                         hint: "CCMS",
+                                         controller: _ccmsController,
+                                       ),
+                                       SearchTextField(
+                                         hint: "GateWay",
+                                         controller: _ilmNode,
+                                       ),
+                                       Container(
+                                           width: size.width,
+                                           padding: const EdgeInsets.only(
+                                               left: 4, right: 4),
+                                           child: ElevatedButton(
+                                             child: const Text("Search"),
+                                             onPressed: () {},
+                                           )),
+                                     ],
+                                   )),
+                             ],
+                           ),
+                         ),
+                         Card(
+                           child: Column(
+                             children: [
+                               DeviceListCard(
+                                 labelName: "ILM List",
+                                 onTab: () {
+                                   setState(() {
+                                     _isIlmList = !_isIlmList!;
+                                   });
+                                 },
+                               ),
+                               Visibility(visible:_isIlmList! ,child: ListView.builder(
+                                   shrinkWrap: true,
+                                   itemCount: 3,
+                                   physics: const ClampingScrollPhysics(),
+                                   itemBuilder: (context, index) {
+                                     return GestureDetector(
+                                       child: Container(
+                                         margin: const EdgeInsets.only(
+                                             left: 10, top: 4, bottom: 4, right: 10),
+                                         child: Text("ABFHFG6576"),
+                                       ),
+                                       onTap: () {},
+                                     );
+                                   }))
+                             ],
+                           ),
+                         ),
+                         Card(
+                           child: Column(
+                             children: [
+                               DeviceListCard(
+                                 labelName: "CCMS List",
+                                 onTab: () {
+                                   setState(() {
+                                     _isCcmsList = !_isCcmsList!;
+                                   });
+                                 },
+                               ),
+                               Visibility(visible: _isCcmsList!,child: ListView.builder(
+                                   shrinkWrap: true,
+                                   itemCount: 3,
+                                   physics: const ClampingScrollPhysics(),
+                                   itemBuilder: (context, index) {
+                                     return GestureDetector(
+                                       child: Container(
+                                         margin: const EdgeInsets.only(
+                                             left: 10, top: 4, bottom: 4, right: 10),
+                                         child: Text("ABFHFG6576"),
+                                       ),
+                                       onTap: () {},
+                                     );
+                                   }))
+                             ],
+                           ),
+                         ),
+                         Card(
+                           child: Column(
+                             children: [
+                               DeviceListCard(
+                                 labelName: "GW List",
+                                 onTab: () {
+                                   setState(() {
+                                     _isGwList = !_isGwList!;
+                                   });
+                                 },
+                               ),
+                               Visibility(visible: _isGwList!,child: ListView.builder(
+                                   shrinkWrap: true,
+                                   itemCount: 3,
+                                   physics: const ClampingScrollPhysics(),
+                                   itemBuilder: (context, index) {
+                                     return GestureDetector(
+                                       child: Container(
+                                         margin: const EdgeInsets.only(
+                                             left: 10, top: 4, bottom: 4, right: 10),
+                                         child: Text("ABFHFG6576"),
+                                       ),
+                                       onTap: () {},
+                                     );
+                                   }))
+                             ],
+                           ),
+                         ),
+                       ],
+                     ),
+                   ))
                   ],
                 )))));
   }
